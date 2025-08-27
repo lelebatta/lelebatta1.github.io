@@ -1,0 +1,55 @@
+allenamenti.html
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GKTRAINING - Allenamenti</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="allenamenti-page">
+    <header class="header">
+        <a href="index.html" class="back-link">&larr; Home</a>
+        <h1>Programmazione Allenamenti</h1>
+    </header>
+
+    <main class="container">
+        <section class="form-section">
+            <h2>Crea un nuovo allenamento</h2>
+            <form id="form-nuovo-allenamento">
+                <label for="data-allenamento">Data Allenamento:</label>
+                <input type="date" id="data-allenamento" required>
+
+                <h3>Seleziona i Portieri:</h3>
+                <div id="lista-portieri-checkboxes" class="portieri-checkboxes">
+                    </div>
+                
+                <h3>Aggiungi Esercizi:</h3>
+                <div id="lista-esercizi-selezionati">
+                    </div>
+
+                <button type="button" id="btn-aggiungi-esercizio">Aggiungi Esercizio</button>
+                <button type="submit">Salva Allenamento</button>
+            </form>
+        </section>
+
+        <section class="data-section">
+            <h2>Allenamenti Salvati</h2>
+            <ul id="lista-allenamenti">
+                </ul>
+        </section>
+    </main>
+
+    <div id="modale-esercizi" class="modale">
+        <div class="modale-contenuto">
+            <span class="chiudi-modale">&times;</span>
+            <h2>Seleziona un esercizio</h2>
+            <ul id="lista-esercizi-modale">
+                </ul>
+            <p id="msg-modale-nessun-esercizio" style="display:none;">Nessun esercizio presente.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

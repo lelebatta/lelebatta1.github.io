@@ -1,0 +1,462 @@
+style.css
+@font-face {
+    font-family: 'Lemon Milk';
+    src: url('assets/fonts/LemonMilk-Regular.otf') format('opentype');
+}
+
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --background-color: #f8f9fa;
+    --card-bg-color: #ffffff;
+    --text-color: #343a40;
+}
+
+body {
+    font-family: 'Lemon Milk', sans-serif;
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 20px;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: var(--text-color);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative; /* Necessario per posizionare il pulsante di logout */
+}
+
+.logo {
+    width: 250px;
+    height: auto;
+}
+
+.back-link {
+    float: left;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.logout-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-family: 'Lemon Milk', sans-serif;
+    transition: background-color 0.2s;
+}
+
+.logout-btn:hover {
+    background-color: #c82333;
+}
+
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: var(--card-bg-color);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    flex: 1 1 200px;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.form-section, .data-section {
+    background-color: var(--card-bg-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input[type="text"], input[type="date"], select, textarea, input[type="number"], input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+button[type="submit"], button[type="button"] {
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover, button[type="button"]:hover {
+    background-color: #0a58ca;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #f1f3f5;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    flex-wrap: wrap;
+}
+
+.portiere-info-wrapper, .esercizio-info-wrapper {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.portiere-list-item-img, .esercizio-list-item-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 2px solid var(--primary-color);
+}
+
+.actions {
+    margin-left: 10px;
+}
+
+.btn-modifica, .btn-elimina, .btn-rimuovi-esercizio {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.btn-modifica {
+    background-color: #ffc107;
+    color: var(--text-color);
+    margin-right: 5px;
+}
+
+.btn-elimina {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-rimuovi-esercizio {
+    background: none;
+    color: #dc3545;
+    font-size: 1.2rem;
+    padding: 0;
+}
+
+.anteprima-foto, .anteprima-disegno {
+    width: 100px;
+    height: 100px;
+    border: 1px dashed #ccc;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.anteprima-foto img, .anteprima-disegno img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
+/* Stili specifici per la pagina Allenamenti */
+.allenamenti-page .container {
+    display: block;
+}
+
+.portieri-checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.portieri-checkboxes label {
+    display: flex;
+    align-items: center;
+    background-color: #e9ecef;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.portieri-checkboxes label:hover {
+    background-color: #dee2e6;
+}
+
+.portieri-checkboxes input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.allenamento-esercizio-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    background-color: #f1f3f5;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.allenamento-esercizio-item input {
+    width: 60px;
+}
+
+.allenamento-esercizio-item button {
+    background: none;
+    border: none;
+    color: #dc3545;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.lista-allenamenti-item {
+    padding: 15px;
+    border-left: 5px solid var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.lista-allenamenti-item h3 {
+    margin-top: 0;
+}
+
+/* Stili per la pagina Report */
+.report-page .container {
+    display: block;
+}
+
+.report-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.report-header .report-logo, .report-header .report-photo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.report-header .report-photo {
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);
+}
+
+.report-body {
+    padding: 20px;
+}
+
+.report-summary p {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.chart-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 30px auto;
+}
+
+/* Stili per la modale */
+.modale {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modale-contenuto {
+    background-color: var(--card-bg-color);
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.chiudi-modale {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.chiudi-modale:hover, .chiudi-modale:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.lista-esercizi-modale-item {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.lista-esercizi-modale-item:hover {
+    background-color: #f0f0f0;
+}
+
+/* Stili per la pagina di login */
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-box {
+    background-color: var(--card-bg-color);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-box h2 {
+    margin-bottom: 30px;
+}
+
+.login-box input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.login-box button {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.error-msg {
+    color: #dc3545;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+/* Responsive design per schermi più piccoli */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    .header {
+        margin-bottom: 20px;
+    }
+    .logo {
+        width: 180px;
+    }
+    .card {
+        padding: 20px;
+        flex-basis: 100%;
+    }
+    .card img {
+        width: 100px;
+        height: 100px;
+    }
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .portiere-info-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .actions {
+        margin-left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .modale-contenuto {
+        width: 90%;
+        margin-top: 50px;
+    }
+    .logout-btn {
+        top: 5px;
+        right: 5px;
+        padding: 8px 12px;
+    }
+}

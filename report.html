@@ -1,0 +1,44 @@
+report.html
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GKTRAINING - Report</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body class="report-page">
+    <header class="header">
+        <a href="index.html" class="back-link">&larr; Home</a>
+        <h1>Statistiche e Report</h1>
+    </header>
+
+    <main class="container">
+        <section class="form-section">
+            <h2>Genera un report</h2>
+            <form id="form-report">
+                <label for="select-portiere">Seleziona Portiere:</label>
+                <select id="select-portiere" required>
+                    </select>
+
+                <label for="data-inizio">Periodo dal:</label>
+                <input type="date" id="data-inizio" required>
+                
+                <label for="data-fine">Periodo al:</label>
+                <input type="date" id="data-fine" required>
+
+                <button type="submit">Genera Report</button>
+            </form>
+        </section>
+
+        <section class="data-section report-display" id="report-display">
+            <p>Seleziona un portiere e un periodo per generare un report.</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

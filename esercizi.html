@@ -1,0 +1,44 @@
+esercizi.html
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GKTRAINING - Esercizi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="esercizi-page">
+    <header class="header">
+        <a href="index.html" class="back-link">&larr; Home</a>
+        <h1>Database Esercizi</h1>
+    </header>
+
+    <main class="container">
+        <section class="form-section">
+            <h2>Aggiungi un nuovo esercizio</h2>
+            <form id="form-gestione-esercizio">
+                <input type="hidden" id="esercizio-id">
+                <input type="text" id="titolo-esercizio" placeholder="Titolo" required>
+                <select id="categoria-esercizio" required>
+                    <option value="" disabled selected>Seleziona categoria</option>
+                    <option value="Prese">Prese</option>
+                    <option value="Palle Alte">Palle Alte</option>
+                    <option value="Parate">Parate</option>
+                    <option value="Gestione Podalica">Gestione Podalica</option>
+                    <option value="Forza">Forza</option>
+                </select>
+                <textarea id="commento-esercizio" placeholder="Commento"></textarea>
+                <input type="file" id="disegno-esercizio" accept="image/*">
+                <button type="submit" id="btn-salva-esercizio">Aggiungi</button>
+            </form>
+        </section>
+
+        <section class="data-section">
+            <h2>Lista Esercizi</h2>
+            <ul id="lista-esercizi">
+                </ul>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

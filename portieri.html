@@ -1,0 +1,43 @@
+portieri.html
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GKTRAINING - Portieri</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="portieri-page main-body">
+    <header class="header">
+        <a href="index.html" class="back-link">&larr; Home</a>
+        <h1>Gestione Portieri</h1>
+        <button id="logout-btn" class="logout-btn">Logout</button>
+    </header>
+
+    <main class="container">
+        <section class="form-section">
+            <h2>Aggiungi / Modifica Portiere</h2>
+            <form id="form-gestione-portiere">
+                <input type="hidden" id="portiere-id">
+                <input type="text" id="nome" placeholder="Nome" required>
+                <input type="text" id="cognome" placeholder="Cognome" required>
+                <input type="date" id="data-nascita" required>
+                <input type="text" id="squadra" placeholder="Squadra" required>
+                <label for="foto-portiere">Foto del portiere (opzionale):</label>
+                <input type="file" id="foto-portiere" accept="image/*">
+                <div id="anteprima-foto" class="anteprima-foto">
+                    <span>Nessuna immagine selezionata</span>
+                </div>
+                <button type="submit" id="btn-salva-portiere">Aggiungi</button>
+            </form>
+        </section>
+
+        <section class="data-section">
+            <h2>Lista Portieri</h2>
+            <ul id="lista-portieri">
+                </ul>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
